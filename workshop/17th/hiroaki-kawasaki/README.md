@@ -13,7 +13,7 @@
 # コース３ チーム課題
 エンジニア養成塾 コース３ チーム１
 
-## Pre-Arm Motor Check (wip)
+## Pre-Arm Motor Check
 Disarm状態のときに、
 特定のモード（SCR_USER1が0のときはAcro、0以外のときはその値に対応するモード）に変更されたとき、
 右回りに１つずつモーターを特定の出力（MOT_SPIN_ARMで設定された値）で回転させて、
@@ -35,6 +35,12 @@ Disarm状態のときに、
 実行には `SERIAL5_PROTOCOL`を `28(Scriipting)` に設定する必要がある。
 
 ![S__9871363](https://github.com/tajisoft/droneschool/assets/85010654/91ef5019-3dc3-4e68-aadb-3633f854a906)
+
+### コンパニオンコンピューター側のソースコード
+CC側のソースコードはplatformIO環境で実装している。
+参考のため、`M5atomS3_source`フォルダにコードを置いた。
+https://github.com/kaw803/droneschool/tree/feat/add_M5atomS3_source/workshop/17th/hiroaki-kawasaki
+
 
 ### Serial data format
 コンパニオンコンピューター（ESP32S3）から、シリアル通信で、１秒間隔で各モーターの回転数が送信されている。
